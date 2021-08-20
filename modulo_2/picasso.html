@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintando</title>
+</head>
+<body>
+
+    Escolha uma cor <input type="color" name="Escolha uma cor" id="">
+    <br>
+    <canvas width="1000" height="800"></canvas>
+
+    <script>
+        
+        var paleta = document.querySelector ("input");
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+
+        pincel.fillStyle = "lightgrey";
+        pincel.fillRect(0, 0, 1000, 800);
+
+        var desenha = false;
+
+        function desenhaCirculo(evento) {
+
+            if (desenha) { 
+                
+                var x = evento.pageX - tela.offsetLeft;
+                var y = evento.pageY - tela.offsetTop;
+            
+                pincel.fillStyle = paleta.value;
+                pincel.beginPath();
+                pincel.arc(x, y, 10, 0, 2 * 3.14);
+                pincel.fill();
+            }   
+                console.log(x + ',' + y);
+        }
+        
+        tela.onmousemove = desenhaCirculo;
+        
+        function habilitaDesenhar() {
+
+            desenha = true;
+        }
+        function desabilitaDesenhar() {
+
+            desenha = false;
+        }
+
+        tela.onmousedown = habilitaDesenhar;
+        tela.onmouseup = desabilitaDesenhar;
+
+    </script>
+    
+</body>
+</html>

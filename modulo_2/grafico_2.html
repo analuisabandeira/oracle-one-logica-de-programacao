@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico</title>
+</head>
+<body>
+
+    <h1>Desenhando Gráficos</h1>
+    <!--<h2>Vou desenhar o mesmo gráfico, mas agora irei utilizar arrays.</h2>-->
+    
+    <canvas width="600" height="400"></canvas>
+    <script>
+
+        var tela = document.querySelector ("canvas");
+        var pincel = tela.getContext ("2d");
+        pincel.fillStyle = "lightgrey";
+        pincel.fillRect (0,0,600,400);
+
+        var tela = document.querySelector ("canvas");
+        var pincel = tela.getContext ("2d");
+
+        function desenhaRetangulo (x,y,largura,altura,cores) {           
+
+            pincel.fillStyle = cores;
+            pincel.fillRect (x,y,largura,altura);
+            pincel.strokeStyle = "black";
+            pincel.strokeRect (x,y,largura,altura);
+        }
+
+        function escreveTexto (texto,x,y) {
+
+            pincel.font = "15px Georgia";
+            pincel.fillStyle = "black";
+            pincel.fillText (texto, x, y);
+        }
+
+        function desenhaBarra (x, y, ano, cores, texto) {
+            
+            escreveTexto (texto, x, y - 10);
+            var somaAltura = 0;
+            
+            
+            for (var i=0; i < ano.length; i++) {
+                
+                var altura = ano [i] * 2;
+                desenhaRetangulo (x, y + somaAltura, 100, altura, cores [i]);
+                somaAltura = somaAltura + altura;
+                
+            }
+        }           
+        
+        var cores = ["blue","green","yellow","red"];
+        var ano2015 = [50,25,20,5];
+        var ano2016 = [65,20,13,2];
+
+        escreveTexto ("NAVEGADORES MAIS USADOS PELOS ALUNOS DA ALURA", 90, 40);
+        escreveTexto ("Legenda:", 20, 85);
+        desenhaRetangulo (30, 100, 20, 20, "blue");
+        escreveTexto ("Google", 55, 115);
+        desenhaRetangulo (110, 100, 20, 20, "green");
+        escreveTexto ("Firefox", 135, 115);
+        desenhaRetangulo (195, 100, 20, 20, "yellow");
+        escreveTexto ("Safari", 220, 115);
+        desenhaRetangulo (270, 100, 20, 20, "red");
+        escreveTexto ("Outros (Opera, IE, Edge, etc.)", 295, 115);
+        desenhaBarra (150,200,ano2015, cores, "2015");
+        desenhaBarra (350,200,ano2016, cores, "2016");
+
+    </script>
+</body>
+</html>

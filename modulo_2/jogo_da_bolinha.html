@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Bolinha</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+    <script>
+
+        var tela = document.querySelector ("canvas");
+        var pincel = tela.getContext ("2d");
+        
+
+        var x = 20;
+        var y = 20;
+
+        //código das setas do teclado
+
+        var esquerda = 37;
+        var cima = 38;
+        var direita = 39;
+        var baixo = 40;
+
+        // taxa de incremento 
+
+        var taxa = 10; 
+
+        function desenhaBolinha (x,y,raio) {
+
+            pincel.fillStyle = "violet";
+            pincel.fillRect (0,0,600,400);
+            pincel.fillStyle = "purple";
+            pincel.beginPath ();
+            pincel.arc (x,y,raio,0, 2 * Math.PI);
+            pincel.fill ();
+        }
+
+        function limpaTela () {
+            
+            pincel.clearRect (0,0,600,400);
+            
+        }
+        
+        
+        function atualizaTela () {
+            
+            limpaTela ();
+            desenhaBolinha (x,y,20);
+        }
+        
+        setInterval (atualizaTela, 20);
+        
+        function comando (evento) {
+        
+            if (evento.keyCode == esquerda) {
+        
+                x = x - taxa;
+                
+        
+            } else if (evento.keyCode == cima) {
+        
+                y = y - taxa;
+                
+            } else if (evento.keyCode == direita) {
+        
+                x = x + taxa;
+                
+            } else if (evento.keyCode == baixo) {
+        
+                y = y + taxa;
+                
+            }
+        
+        }
+        
+        document.onkeydown = comando; 
+        
+    </script>
+    
+</body>
+</html>

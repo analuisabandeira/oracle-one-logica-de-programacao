@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Barras</title>
+</head>
+<body>
+    <h1>Desenhando Gráficos de Barras</h1>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        
+        var tela = document.querySelector ("canvas");
+        var pincel = tela.getContext ("2d");
+        pincel.fillStyle = "lightgrey";
+        pincel.fillRect (0,0,600,400);
+
+        function escreveTexto (texto, x, y) {
+
+            pincel.font = "15px Georgia";
+            pincel.fillStyle = "black";
+            pincel.fillText (texto, x, y);
+        }
+
+        function desenhaGrafico (x,y,w,h, cor) {
+
+            pincel.fillStyle = cor;
+            pincel.fillRect (x,y,w,h);
+            pincel.fillStroke = "black";
+            pincel.strokeRect (x,y,w,h);
+
+        }
+
+        function desenhaLegenda (x,y,tamanho, cor) {
+
+            pincel.fillStyle = cor;
+            pincel.fillRect (x, y, tamanho, tamanho);
+            pincel.fillStroke = "black";
+            pincel.strokeRect (x,y, tamanho, tamanho);
+        }
+
+        escreveTexto ("Legenda:", 20, 20);
+        desenhaLegenda (30,40,20,"blue");
+        escreveTexto ("Google",55,55);
+        desenhaLegenda (115,40,20,"green");
+        escreveTexto ("Firefox",140,55);
+        desenhaLegenda (195,40,20,"yellow");
+        escreveTexto ("Safari",220,55);
+        desenhaLegenda (270,40,20,"red");
+        escreveTexto ("Outros (Opera, IE, Edge, etc.)",295,55);
+        escreveTexto ("2015",150, 190);
+        desenhaGrafico (150,200,100,100,"blue");
+        desenhaGrafico (150,300,100,50,"green");
+        desenhaGrafico (150,350,100,40,"yellow");
+        desenhaGrafico (150,390,100,10,"red");
+        escreveTexto ("2016",350, 190);
+        desenhaGrafico (350,200,100,130,"blue");
+        desenhaGrafico (350,330,100,40,"green");
+        desenhaGrafico (350,370,100,26,"yellow");
+        desenhaGrafico (350,396,100,4,"red");
+
+    </script>
+    
+</body>
+</html>

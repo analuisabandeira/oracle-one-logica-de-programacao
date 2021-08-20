@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenhando bolinhas</title>
+</head>
+<body>
+
+    <h1>Vamos desenhar bolinhas!</h1>
+    <p> Obs.: Para aumentar o diâmetro da bolinha pressione a tecla "shift"</p>
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+        
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext ("2d");
+
+        pincel.fillStyle = "violet";
+        pincel.fillRect (0,0,600,400);
+        var raio = 10; /*a variável raio precisa ficar fora da função desenhaBlinha, porque se não, sempre que a função for executada, ela irá iniciar com o valor 10 */
+        
+        function desenhaBolinha (evento) {                 
+                
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+
+            
+            if (evento.shiftKey && evento.altKey) {
+
+                alert ("Pressione uma tecla por vez!");
+
+            } else {
+                if (evento.shiftKey && raio + 10 <= 40) {
+                    
+                    raio = raio + 10;                
+                } else {
+                    if (evento.altKey && raio - 5 >= 10) {
+
+                        raio = raio - 5;
+                    }
+                }
+            }
+            
+            pincel.fillStyle = "purple";
+            pincel.beginPath ();
+            pincel.arc (x, y, raio, 0, 2*3.14);
+            pincel.fill ();
+            console.log (x + "," + y);        
+            
+        }
+            tela.onclick = desenhaBolinha; 
+
+    </script>
+    
+</body>
+</html>

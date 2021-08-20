@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsando</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+
+        var tela = document.querySelector ("canvas");
+        var pincel = tela.getContext ("2d");
+
+        pincel.fillStyle = "lightblue";
+        pincel.fillRect (0,0,600,400);
+
+        var raio = 19;
+        var recalcula = 0;
+
+        function desenhaCirculo (x,y,raio) {
+
+            pincel.fillStyle = "red";
+            pincel.beginPath ();
+            pincel.arc (x,y,raio,0, 2 * Math.PI);
+            pincel.fill ();
+        }
+
+        function limpaTela () {
+
+            pincel.clearRect (0,0,600,400);
+        }
+
+        function pulsa () {
+
+            limpaTela ();
+            
+            if (raio>30) {
+                
+                recalcula = -1;
+                
+            } else if (raio<20) {
+                
+                recalcula =1;
+                
+            }
+            
+            desenhaCirculo (300,200,raio);
+            raio = raio + recalcula;
+        }
+
+        setInterval (pulsa,20);
+
+
+    </script>
+    
+</body>
+</html>
