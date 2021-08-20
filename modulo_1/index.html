@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica da Programação</title>
+</head>
+<body>
+
+    <h1>Nesse ponto, vamos trabalhar funções</h1>
+    <h2>Observe o seguinte cálculo de IMC's:</h2>
+    <script>
+
+        function pulaLinha () {
+            document.write ("<br><br>");
+
+        }
+
+        function mostra (frase) {
+            document.write (frase);
+            pulaLinha();
+        }
+
+        function calculaImc (peso,altura) {
+            return peso / (altura*altura);
+        }
+
+        mostra ("O meu peso é 68kg e minha altura é 1.66cm.")
+        mostra ("Portanto, meu IMC é " + calculaImc (68,1.66));
+        mostra ("Eu usei uma função com dois parâmetro (peso e altura) para obter o retorno do cálculo do IMC")
+
+    </script>
+    
+</body>
+</html>

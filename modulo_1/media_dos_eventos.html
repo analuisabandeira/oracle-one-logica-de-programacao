@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write ("<br> <br>");
+    }
+
+    function mostra (frase) {
+        document.write(frase);
+        pulaLinha ();
+    } 
+
+    var totalEventos = parseInt (prompt ("Quantos eventos você teve nesse mês?"));
+    contador = 1
+    var valorGasto = 0 
+
+    while (contador <= totalEventos) {
+
+        var despesa = parseInt (prompt ("Diga, em sequência, quanto você gastou em cada evento para calcularmos a média."));
+        valorGasto = valorGasto + despesa; 
+        contador ++
+    }
+
+    var mediaDespesas = valorGasto / totalEventos;
+
+    mostra ("A média de gastos dos eventos desse mês foi de " + mediaDespesas + " reais.");
+
+</script>

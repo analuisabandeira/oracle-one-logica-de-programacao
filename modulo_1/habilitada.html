@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var nome = prompt ("Como gostaria de ser chamada?");
+    var idade = parseInt( prompt("Olá, " + nome + ", qual é sua idade?"));
+    var temCarteira = prompt(nome + ", você tem carteira? Responda Sim ou Não");
+
+
+    if (idade >= 18 && ((temCarteira == "Sim") ||(temCarteira == "sim") || (temCarteira == "s") ||(temCarteira == "S"))) {
+        
+        mostra ("Você está apta para dirigir!")
+    }
+        else {
+            mostra ("Você não está apta para dirigir! Pede um Uber! ;)")
+    }
+
+</script>

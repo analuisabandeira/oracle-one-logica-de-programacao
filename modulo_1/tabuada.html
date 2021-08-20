@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+
+        function pulaLinha() {
+            document.write ("<br> <br>");
+        }
+
+        function mostra (frase) {
+            document.write(frase);
+            pulaLinha ();
+        } 
+    
+    var tabuada = parseInt (prompt("Você quer ver a tabuada de qual número?"))
+
+    for ( multiplicador = 1; multiplicador <= 10; multiplicador ++) {
+        mostra( tabuada +" vezes " + multiplicador + " é = " + (tabuada * multiplicador))
+    }
+
+    mostra ("FIM")
+
+</script>

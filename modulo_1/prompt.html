@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Prompt</title>
+</head>
+<body>
+
+    <script>
+        function pulaLinha() {
+            document.write ("<br> <br>");
+        }
+
+        function mostra (frase) {
+            document.write(frase);
+            pulaLinha ();
+        }
+
+        function calculaImc (peso,altura) {
+            return peso / (altura * altura); 
+        }
+
+        var nome = prompt ("Olá! Como gostaria de ser chamada?")
+        var alturaInformada = prompt (nome + ", informe a sua altura");
+        var pesoInformado = prompt (nome + ", informe o seu peso")
+        var imc = calculaImc (pesoInformado, alturaInformada);
+
+        mostra(nome + ", o seu IMC é " + imc)
+
+    </script>
+    
+</body>
+</html>

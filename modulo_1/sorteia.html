@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var nome = prompt ("Como gostaria de ser chamado?");
+    alert (nome + ", bem vinda ao Sua Sorte! Vamos ver se ela está ao seu favor!");
+    var num = parseInt(prompt ( nome + ", escolha um número de 0 a infinito"));
+    
+    function sorteia (num) {
+        
+        var numeroSorteado = Math.round (Math.random()* num);
+        console.log(numeroSorteado);
+        return numeroSorteado;
+    }
+    
+
+    var numeroPensado = sorteia (num);
+
+    var chute = parseInt(prompt("Já pensei em um número. Adivinha qual é? Lembrando que ele está entre 0 e " + num + "..."));
+
+    if (chute == numeroPensado) {
+        mostra ("UAU! Na mosca!")
+    }  
+        if (chute < numeroPensado) {
+            mostra ("O número que eu pensei foi maior que o seu!") }
+        
+            if (chute > numeroPensado) {
+            mostra ("O número que eu pensei foi menor que o seu!")
+        }
+
+</script>

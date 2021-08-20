@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br> <br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+  
+    
+    alert ("Bem vindo ao Geniu's play! Aperte para iniciar!");
+    var nome = prompt ("Como gostaria de ser chamado?");
+
+    var numeroPensado = Math.round(Math.random()*100);
+    console.log (numeroPensado);
+    var tentativas = 1;
+
+    while (tentativas <= 3) {
+
+        var chute = parseInt (prompt(nome + ", eu pensei em um número de 0 a 100. Advinha qual foi?"));
+
+        if (chute == numeroPensado) {
+
+        mostra ("Caramba! Você é muito bom! Eu realmente pensei no " + numeroPensado);
+
+        break;
+
+        } else {
+
+            alert ("Poxa... não foi dessa vez!");            
+        }
+        
+        tentativas ++;
+    }
+
+    mostra ("FIM")
+
+</script>

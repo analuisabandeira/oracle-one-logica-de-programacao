@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numero = parseInt(prompt("Digite um número para saber se é par!"));
+    
+    if (numero % 2 == 0) {
+
+    mostra("O número " + numero + " é par!");
+    } 
+
+    else {
+
+    mostra("O número " + numero + " é ímpar!");
+    }
+
+</script>
