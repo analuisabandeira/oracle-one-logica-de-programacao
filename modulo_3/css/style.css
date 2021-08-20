@@ -1,0 +1,55 @@
+.titulo-principal {
+
+    padding-left: 20px;
+}
+
+#caixa-banner {
+
+    width: 100%;    
+}
+
+.principal {
+    background-color: #CCCCCC;
+    padding: 30px;
+}
+
+.title {
+
+    text-align: center;
+}
+
+.paragrafo {
+
+    text-align: center;
+}
+
+.paragrafo-destaque {
+
+    text-align: center;
+    font-size: 20px;
+}
+
+.destaque {
+
+    color: red;
+}
+
+.beneficios {
+
+    background-color: #FFFFFF;
+    padding: 20px; 
+}
+
+.lista {
+
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+    font-style: italic;
+}
+
+.imagem-beneficios {
+
+    width: 50%;
+}
