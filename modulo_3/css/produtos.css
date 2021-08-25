@@ -1,0 +1,114 @@
+body {
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+header {
+
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa-banner {
+    
+    position: relative;
+    width: 940px;
+    margin: 0 auto;    
+}
+
+nav {
+
+    position: absolute;
+    top: 110px;
+    right: 0;
+    
+}
+
+nav li{
+
+    display: inline;
+    margin: 0 0 0 15px; /*o sentido da margin é top,right,botton e left*/
+}
+
+nav a {
+
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold; /*bold = negrito */
+    font-size: 28px;
+    text-decoration: none;
+}
+
+nav a:hover {
+
+    color: #C78C19;
+    text-decoration: underline;     
+}
+
+.produtos {
+
+    width: 940px;
+    margin: 0 auto; 
+    padding: 50px 0;
+}
+
+.produtos li {
+
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /*essa propriedade faz com que o widht seja o tamanho de referência e o padding vai se adequar a ele, não somar-se ao mesmo*/
+    border-color: black; /*podemos declarar em um único comando border: 2px solid black*/
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+
+    border-color: #C78C19;
+}
+
+.produtos li:active {
+    
+    color: #C78C19;
+}
+
+.produtos li:hover h2 {
+
+    font-size: 34px;
+}
+
+
+.produtos h2 {
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+
+    font-size: 18px;
+}
+
+.produto-preco {
+
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    background-image: url(../imagem/bg.jpg);
+    padding: 40px 0;
+}
+
+footer p {
+
+    color: white;
+    font-size: 13px;
+    margin-top: 20px;
+}
