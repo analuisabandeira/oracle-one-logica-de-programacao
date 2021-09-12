@@ -9,8 +9,10 @@ header {
     background-image: url(../imagem/banner.jpg);
     background-size: cover;
     background-position: inherit;
-    height: 50vh;  
+    height: 50vh;
 }
+
+
 
 h1 {
     
@@ -35,8 +37,9 @@ main {
     width: 35%;
 }
 
-.title {
+.titulo{
 
+    text-align: center;
     font-weight: bold;
     font-size: 40px;
     margin-bottom: 20px;
@@ -57,7 +60,7 @@ main {
     color: #c78c19;
 }
 
-.title2 {
+.titulo2 {
 
     font-weight: bold;
     font-size: 25px;
