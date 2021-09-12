@@ -1,0 +1,113 @@
+* {
+    margin:0;
+    font: inherit;
+    text-decoration: none;
+}
+
+header {
+
+    background-image: url(../imagem/banner.jpg);
+    background-size: cover;
+    background-position: inherit;
+    height: 50vh;  
+}
+
+h1 {
+    
+    position: relative;
+    top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1.5px 1.5px #5f4108;
+    font-size: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+}
+
+main {
+    margin: 3rem auto;
+    display: flex;
+    justify-content: space-around;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.principal {
+
+    width: 35%;
+}
+
+.title {
+
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.paragrafo {
+
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.destaque {
+
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: #c78c19;
+}
+
+.title2 {
+
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.link {
+
+    color: black;
+
+}
+.link:hover {
+
+    color: #c78c19;
+    font-size: 28px;
+}
+
+.beneficios {
+
+    width: 35%;
+}
+
+.lista {
+
+    display: inline-block;
+    vertical-align: top;
+    font-style: italic;    
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.lista li:hover {
+
+    font-size: 23px;
+}
+.imagem-beneficios {
+
+    width: 100%;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    background-image: url(../imagem/bg.jpg);
+    padding: 40px 0;
+}
+
+footer p {
+
+    color: white;
+    font-size: 13px;
+    margin-top: 20px;
+}
